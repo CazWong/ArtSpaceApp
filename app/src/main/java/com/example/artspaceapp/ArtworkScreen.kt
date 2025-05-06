@@ -9,7 +9,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
@@ -25,7 +25,7 @@ fun ArtworkScreenLayout(
     artworkList: List<Artwork>,
 ) {
 
-    var currentArtworkIndex by remember { mutableIntStateOf(0) }
+    var currentArtworkIndex by rememberSaveable { mutableIntStateOf(0) }
 
     Column(
         modifier = modifier
