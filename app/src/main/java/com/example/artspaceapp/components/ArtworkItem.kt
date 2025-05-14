@@ -28,18 +28,17 @@ fun ArtworkItem(
         elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
     ) {
         Box(
-            modifier = Modifier,
+            modifier = Modifier.padding(
+                top = 16.dp,
+                start = 16.dp,
+                end = 16.dp,
+                bottom = 48.dp
+            ),
             contentAlignment = Alignment.Center
         ) {
             Image(
                 painter = image,
                 contentDescription = contentDescription,
-                modifier = Modifier.padding(
-                    top = 16.dp,
-                    start = 16.dp,
-                    end = 16.dp,
-                    bottom = 48.dp
-                ),
                 contentScale = contentScale
             )
         }
